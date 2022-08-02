@@ -28,6 +28,7 @@ function ERPNext(config) {
         }else if(this.api_key || this.api_secret){
             url_path = '/api/method/frappe.auth.get_logged_user'
         }
+        console.log("url_path",url_path);
         return requestPromise.post({
             url: self.host + url_path,
             jar: self.cookieJar,
