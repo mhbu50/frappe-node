@@ -1,4 +1,4 @@
-# erpnext-node
+# frappe-node
 
 Node library to use the frappe/erpnext api
 
