@@ -9,6 +9,8 @@ function ERPNext(config) {
     this.host = config.host;
     this.user = config.user;
     this.password = config.password;
+    this.api_key = config.api_key;
+    this.api_secret = config.api_secret;
     this.cookieJar = request.jar();
     let self = this;
 
@@ -37,6 +39,7 @@ function ERPNext(config) {
                     form: data,
                     headers: {
                         'Content-Type':'application/json',
+                        'Authorization':`token ${this.api_key}:${this.api_secret}`
                     }
                 })
 
