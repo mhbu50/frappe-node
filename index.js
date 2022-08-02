@@ -21,9 +21,15 @@ function ERPNext(config) {
     }
 
     this.login = function () {
+        let url_path = '';
         let formData = {usr: self.user, pwd: self.password};
+        if(self.user || self.password){
+            url_path = '/api/method/login'
+        }else if(this.api_key || this.api_secret){
+            url_path = '/api/method/frappe.auth.get_logged_user'
+        }
         return requestPromise.post({
-            url: self.host + '/api/method/login',
+            url: self.host + url_path,
             jar: self.cookieJar,
             form: formData,
         });
