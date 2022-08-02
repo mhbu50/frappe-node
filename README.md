@@ -7,7 +7,7 @@ Node library to use the frappe/erpnext api
 Add the following line under dependencies in your package.json:
 
 ```json
-"erpnext-node": "sohzaz/erpnext-node"
+"frappe-node": "mhbu50/frappe-node"
 ```
 
 Then run npm
@@ -21,7 +21,7 @@ npm install
 In order to use this module, first import it in you application:
 
 ```js
-const ERPNext = require('erpnext-node');
+const ERPNext = require('frappe-node');
 ```
 
 Next, initialize the ERPNext object with the connection information for your Erpnext instance:
