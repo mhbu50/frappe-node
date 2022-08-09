@@ -13,6 +13,29 @@ function ERPNext(config) {
     this.api_secret = config.api_secret;
     this.cookieJar = request.jar();
     let self = this;
+    
+        this.host = host;
+    };
+
+    this.get_host = function(){
+        return this.host;
+    };
+
+    this.set_user = function(user){
+        this.user = user;
+    };
+
+    this.get_user = function(){
+        return this.user;
+    };
+
+    this.set_password = function(password){
+        this.password = password;
+    };
+
+    this.get_password = function(){
+        return this.password;
+    };
 
     this.buildUrlString = (params) => {
         if (!Array.isArray(params))
